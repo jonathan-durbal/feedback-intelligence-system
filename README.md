@@ -1,4 +1,4 @@
-# Google Drive Product Feedback Intelligence (BevoGPT)
+# Google Drive Product Feedback Intelligence
 
 This project builds an end to end product feedback intelligence system that takes raw Google Drive user feedback, analyzes it using a retrieval augmented generation pipeline, produces structured JSON for PM workflows, and can optionally send this structured output directly into Jira. The primary goal is to help product teams gain consistent insights, generate usable user stories, and standardize issue creation.
 

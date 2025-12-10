@@ -1,0 +1,95 @@
+## Release Notes -- Recent Improvements to Search (Q3 2024)
+
+Overview:
+Drive's search system received updates to improve relevance and reduce delays after new uploads.
+
+Key Changes:
+- Faster indexing for recently added files
+- Improved ranking for frequently accessed documents
+- Better detection of file types during search
+- Fix for mobile filter panel not applying consistently
+
+Known Limit / Follow-Up:
+- Complex queries may still return mixed relevance
+- Team is evaluating improvements to multi-filter combinations
+
+Impact for Users:
+- Faster discovery of new files
+- More accurate suggestions when typing
+- Fewer cases where older versions appear above newer edits
+
+## Release Notes -- Sync Stability & Conflict Handling (Q2 2024)
+
+Overview:
+Drive made updates to reduce sync conflicts and improve stability across devices.
+
+Key Changes:
+- Automatic detection of potential duplicate edits
+- Clearer conflict resolution prompts
+- More reliable resume behavior for interrupted uploads
+- Reduced cases of duplicate folders during desktop sync
+
+Known Limit / Follow-Up:
+- Offline edits still occasionally create merge conflicts
+- Large folder migrations can take longer than expected
+
+Impact for Users:
+- Fewer unexpected duplicates
+- More predictable sync behavior
+- Clearer messaging when conflicts occur
+
+## Release Notes -- Shared Drive Permission Updates (Q3 2024)
+
+Overview:
+Enhancements were made to clarify team roles and permissions inside Shared Drives.
+
+Key Changes:
+- More descriptive role labels (Manager, Content Manager, Contributor, Viewer)
+- Clear warnings when moving files between Shared Drives
+- Streamlined permission inheritance for subfolders
+
+Known Limit / Follow-Up:
+- Some role combinations still produce confusing outcomes
+- Large Shared Drive reorganizations may temporarily slow access
+
+Impact for Users:
+- Fewer accidental permission errors
+- More predictable access behavior across teams
+
+## Release Notes -- Offline Access Enhancements (Q4 2023)
+
+Overview:
+Updates focused on reliability of offline edits and device sync.
+
+Key Changes:
+- Improved detection of offline state
+- More stable local caching for Docs, Sheets, Slides
+- Reduced frequency of failed syncs when reconnecting
+- Added clearer indicators for files available offline
+
+Known Limit / Follow-Up:
+- Offline support for non-Google file types is still limited
+- Some users may hit storage constraints on older devices
+
+Impact for Users:
+- More confidence editing while offline
+- Fewer sync errors when going back online
+
+## Release Notes -- Sharing UX Refresh (Q1 2024)
+
+Overview:
+Drive updated the sharing interface to reduce confusion and improve clarity.
+
+Key Changes:
+- Simplified permission descriptions
+- Clearer differentiation between "Viewer," "Commenter," and "Editor"
+- Smarter default link-sharing settings based on past behavior
+- Fix for delayed access request notifications
+
+Known Limit / Follow-Up:
+- Some organizations may override defaults
+- Large folder sharing prompts may still feel slow
+
+Impact for Users:
+- Fewer mistaken permission choices
+- Faster, more intuitive sharing experience

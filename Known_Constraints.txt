@@ -1,0 +1,54 @@
+## 1. File Upload & Sync Constraints
+
+- Upload speed depends on user bandwidth and device performance.
+- Very large files require chunked uploads and may fail on unstable networks.
+- Sync conflicts occur when a user edits a file offline while another user edits the same file online.
+- Drive cannot guarantee real-time sync across slow or intermittent connections.
+
+## 2. Storage & File Type Constraints
+
+- Maximum file size varies by account type and file format.
+- Some third-party file formats have limited preview or indexing capabilities.
+- Offline access is restricted to a set of supported file types (Docs, Sheets, Slides).
+- Certain media files cannot be stored offline due to size or format limitations.
+
+## 3. Search & Indexing Constraints
+
+- Newly uploaded files may not appear in search results immediately due to indexing delay.
+- Complex queries or ambiguous keywords may produce inconsistent relevance.
+- Search on mobile devices supports fewer filter options than desktop.
+- Indexing does not process encrypted or password-protected files.
+
+## 4. Sharing & Permissions Constraints
+
+- Public link sharing may be restricted by organizational policies.
+- Shared folder inheritance can lead to unexpected permission behavior if not configured correctly.
+- Files moved between Shared Drives may require re-evaluation of roles or access levels.
+- A user with insufficient permissions may see the file but not open it, depending on settings.
+
+## 5. Shared Drive Constraints
+
+- Shared Drives do not support transferring personal files without proper permissions.
+- Deleted files go to the Shared Drive trash and remain visible to certain roles.
+- Only managers can change top-level access settings.
+- Folder reorganization in large Shared Drives may temporarily reduce performance.
+
+## 6. Version History Constraints
+
+- Not all file types support full version tracking.
+- Restoring a version overwrites the current file state (though the overwritten state becomes a restorable version).
+- Detailed change attribution may be unavailable for older versions.
+- Large or highly edited files may have limited version granularity.
+
+## 7. Offline Access Constraints
+
+- Offline editing is not available for non-Google formats.
+- Device storage limits may prevent marking large files offline.
+- Offline capabilities require prior device authentication.
+- Sync conflicts may still occur when reconnecting.
+
+## 8. Platform Limitations (General)
+
+- Some Drive actions behave differently on mobile vs desktop.
+- Local file system constraints may impact desktop client behavior.
+- Drive depends heavily on stable network connectivity for real-time operations.

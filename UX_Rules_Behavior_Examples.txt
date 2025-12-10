@@ -1,0 +1,55 @@
+## 1. Upload & Sync UX Rules
+
+- Upload progress indicators must update in real time.
+- Error states must show a clear cause and actionable fix (e.g., retry, insufficient storage).
+- Sync indicators must show when files are uploading, processing, or completed.
+- Duplicate files should not be created silently; user must be notified if conflicts occur.
+- Interrupted uploads must resume automatically once connection returns.
+
+## 2. Sharing UX Rules
+
+- Sharing dialog must clearly show current permission level (Viewer, Commenter, Editor).
+- Link-sharing state must be visible immediately (restricted, domain-only, anyone with link).
+- "Request access" actions must notify the file owner promptly.
+- Access changes must provide a confirmation message.
+- Users should not lose access unexpectedly when reordering folders.
+
+## 3. Search Experience Rules
+
+- Search suggestions must appear within fractions of a second.
+- Filters (type, owner, modified date) must apply consistently across platforms.
+- Recent files and frequently opened items should rank higher when relevant.
+- Results must update quickly after new uploads or edits.
+- Long queries should degrade gracefully, showing partial matches.
+
+## 4. Shared Drives UX Rules
+
+- Top-level permissions must be visible and editable only by managers.
+- Subfolders should inherit permissions unless intentionally overridden.
+- Role labels must be descriptive enough for new users to understand access differences.
+- Deleted items must stay in Shared Drive trash, not personal trash.
+- Dragging files between Shared Drives must show role-related warnings.
+
+## 5. Version History UX Rules
+
+- Users should see clear timestamps and authors for each version.
+- Restoring a version must preserve the current version as an accessible backup.
+- Version history should maintain readability even for files with many edits.
+- Users should be able to name important versions.
+- Version history must never silently discard edits.
+
+## 6. Offline Access UX Rules
+
+- Offline-enabled files must display a clear offline indicator.
+- Editing offline must not produce silent errors.
+- Drive must sync changes automatically upon reconnection.
+- Sync conflicts must show a clear comparison of differing versions.
+- Unsupported file types must show a message when offline editing is not available.
+
+## 7. General UX Consistency Rules
+
+- UI elements related to file status (owned, shared, offline, starred) must be consistent across web and mobile.
+- All major actions should offer undo steps when possible.
+- Notifications must not appear out of order or multiple times for the same event.
+- Loading states should be brief and not block core interactions.
+- Error states should avoid technical jargon and explain next steps clearly.

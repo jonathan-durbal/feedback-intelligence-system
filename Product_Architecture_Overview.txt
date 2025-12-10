@@ -1,0 +1,73 @@
+Overview:
+Google Drive is a cloud storage platform that synchronizes user files across web, mobile, and desktop clients. The system uses a client-server model where metadata, file content, permissions, and version history are stored centrally in Google's cloud infrastructure.
+
+## 1. Core Components
+
+### a. Drive Client Layer (Web, Mobile, Desktop)
+- Handles file uploads, downloads, editing, and offline caching.
+- Sends file changes and metadata updates to the server.
+- Displays sync status, sharing options, and version history.
+
+### b. Metadata Service
+- Stores file names, types, owners, collaborators, timestamps, and folder paths.
+- Processes search queries by matching metadata and indexed content.
+- Manages access control checks for every file operation.
+
+### c. File Storage Layer
+- Stores the actual file content in distributed storage systems.
+- Supports large object storage with redundancy for reliability.
+- Handles chunked uploads for large files.
+
+### d. Indexing and Search Engine
+- Indexes file titles, contents of Google Docs formats, and metadata.
+- Updates indexes after new uploads or modifications.
+- Powers Drive search and filtering on web and mobile.
+
+### e. Sync Engine
+- Tracks changes across devices using delta updates.
+- Compares local and cloud versions and resolves conflicts.
+- Supports eventual consistency across devices.
+
+### f. Permissions and Access Control
+- Enforces role based permissions for files and Shared Drives.
+- Evaluates access at the document and folder level.
+- Applies inherited permissions unless overridden.
+
+### g. Version History Service
+- Records snapshots of Docs, Sheets, and Slides.
+- Groups minor changes for readability.
+- Stores restorable snapshots without duplicating full files.
+
+## 2. Data Flow Summary
+
+1. User uploads or edits a file.
+2. Client sends metadata and file chunks to Drive servers.
+3. Storage layer saves the file and updates its hash.
+4. Metadata service updates indexable attributes.
+5. Indexing engine reindexes the file or revision.
+6. Sync engine notifies all devices of the updated version.
+7. Permissions service validates access for any future viewer.
+
+## 3. Cross-Feature Dependencies
+
+- Search depends on metadata accuracy and timely indexing.
+- Offline access relies on local caching and sync engine reliability.
+- Shared Drive behavior depends on consistent role management.
+- Version history interacts with both editing clients and storage.
+
+## 4. Technical Constraints (High Level)
+
+- Search may lag slightly after large uploads due to indexing time.
+- Sync conflicts can occur when offline edits diverge.
+- Permissions must resolve quickly, especially in Shared Drives.
+- Not all file formats support the same level of indexing or versioning.
+
+## 5. What This Architecture Means for User Feedback Analysis
+
+Grounding on this architecture helps RAG interpret feedback related to:
+- Upload delays
+- Sync conflicts across devices
+- Search relevance issues
+- Permission confusion in Shared Drives
+- Offline editing failures
+- Version history limitations

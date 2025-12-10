@@ -1,0 +1,186 @@
+# Feature Spec 1: File Uploading & Sync
+
+Overview:
+Google Drive allows users to upload files from any device and automatically sync them across the web, mobile apps, and the desktop Drive client. Sync ensures that changes made on one device appear on all other devices tied to the same account.
+
+Primary User Flow:
+1. User uploads a file via web, mobile, or desktop client
+2. File is scanned for size/type limits
+3. Sync begins in the background
+4. File becomes available on all devices
+
+Key Behaviors:
+- Sync status indicators show uploading, processing, complete, or error
+- Desktop client mirrors selected folders (optional)
+- Upload automatically resumes if the network is interrupted
+
+Constraints:
+- Single-file upload limit is typically capped depending on account type
+- Sync speed is affected by local bandwidth
+- Certain file formats require conversion before full Drive functionality applies
+
+Known Limitations:
+- Occasional duplicate file conflicts, especially during offline edits
+- Large folders may take several minutes to index
+- Some users report unclear error messages when uploads fail
+
+What "Good" Looks Like:
+- Quick and predictable uploads
+- Reliable sync with no duplicates
+- Meaningful progress indicators
+
+# Feature Spec 2: File Sharing & Permissions
+
+Overview:
+Google Drive supports secure sharing of files and folders using individual permissions or link-based access. Users can grant view, comment, or edit rights.
+
+Primary User Flow:
+1. User selects a file
+2. Opens the sharing menu
+3. Adds people by email or enables link sharing
+4. Sets permission levels
+5. Sends invitation or copies link
+
+Key Behaviors:
+- Permission changes apply immediately across recipients
+- Access can be revoked at any time
+- Link sharing can be restricted to a domain or set to "Anyone with the link"
+
+Constraints:
+- Organizational accounts may block public link sharing
+- Editing restrictions depend on file type (Docs vs PDFs)
+- File owners retain ultimate control of permissions
+
+Known Limitations:
+- Users sometimes confuse "viewer" vs "commenter" roles
+- Shared folder inheritance can be unintuitive
+- Access request notifications may be delayed
+
+What "Good" Looks Like:
+- Clear, consistent permission behavior
+- Easy-to-understand sharing dialog
+- No unexpected access errors
+
+# Feature Spec 3: Shared Drives (Team Drives)
+
+Overview:
+Shared Drives allow teams to store and manage files collectively. Unlike "My Drive," the team, not the individual, owns the content.
+
+Primary User Flow:
+1. User creates or opens a Shared Drive
+2. User uploads or organizes files
+3. Team members collaborate based on assigned roles
+4. Files remain available even if team members leave
+
+Key Behaviors:
+- Access is role-based (Manager, Content Manager, Contributor, Viewer)
+- Files cannot be moved out of a Shared Drive by non-managers
+- Deleted files go to the Shared Drive trash, not personal trash
+
+Constraints:
+- Personal items cannot be transferred into Shared Drives without permission
+- Storage counts against the organization's quota
+- Certain file types may not support advanced Shared Drive features
+
+Known Limitations:
+- Moving large folder trees into Shared Drives can take time
+- Role differences can confuse newer users
+- Ownership transfer rules differ from My Drive
+
+What "Good" Looks Like:
+- Stable team-wide collaboration
+- Predictable permission and ownership rules
+- Easy onboarding for new team members
+
+# Feature Spec 4: Search & Filtering
+
+Overview:
+Drive's search system allows users to locate files by name, type, owner, date, and content. Results appear in real time as the user types.
+
+Primary User Flow:
+1. User types a query
+2. Suggestions appear instantly
+3. User applies filters (file type, owner, location, modified date)
+4. User selects a result
+
+Key Behaviors:
+- Search indexes file names, text within documents, and metadata
+- Quick filters show common categories (PDFs, images, Docs, etc.)
+- Recently opened files receive ranking boosts
+
+Constraints:
+- Indexing delays may occur after large uploads
+- Some third-party document formats have limited indexability
+- Offline files cannot be fully searched
+
+Known Limitations:
+- Occasionally surfaces outdated files
+- Mobile search filters are more limited
+- Complex queries may return inconsistent relevance
+
+What "Good" Looks Like:
+- Fast, predictable result ranking
+- Helpful quick filters
+- Accurate recognition of newly added files
+
+# Feature Spec 5: Version History
+
+Overview:
+Version History tracks edits made to compatible files like Google Docs, Sheets, and Slides. Users can see past changes, compare versions, and restore older copies.
+
+Primary User Flow:
+1. User opens a file
+2. Selects "Version History"
+3. Views timestamps, contributors, and changes
+4. Restores or names versions
+
+Key Behaviors:
+- Auto-saves occur frequently
+- Major changes may be grouped for readability
+- Restorations preserve the current version as a backup
+
+Constraints:
+- Version history is not available for all file types
+- Large files may have limited version granularity
+- Restoring versions may overwrite comments
+
+Known Limitations:
+- Hard to understand detailed contributor edits
+- Naming versions is optional, so lists may become cluttered
+- Some users expect a diff tool that does not exist
+
+What "Good" Looks Like:
+- Clear historical record
+- Easy or reversible restores
+- Understandable view of contributor activity
+
+# Feature Spec 6: Offline Access
+
+Overview:
+Offline Access lets users open and edit select files without an internet connection. Changes sync automatically when connectivity returns.
+
+Primary User Flow:
+1. User marks files "Available offline"
+2. Drive downloads local copies
+3. User edits files offline
+4. Drive syncs changes when online
+
+Key Behaviors:
+- Local storage usage updates automatically
+- Drive attempts conflict resolution if changes differ
+- Offline UI indicators show which files are available
+
+Constraints:
+- Only specific file types support full offline editing (Docs, Sheets, Slides)
+- Large media files cannot be stored offline
+- Offline access requires local device authentication
+
+Known Limitations:
+- Offline edits sometimes create merge conflicts
+- Users may forget which files were marked available
+- Mobile offline support is more limited than desktop
+
+What "Good" Looks Like:
+- Smooth offline editing experience
+- No sync conflicts
+- Clear indicators and predictable behavior

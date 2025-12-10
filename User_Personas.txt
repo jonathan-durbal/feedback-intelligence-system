@@ -1,0 +1,59 @@
+## Persona 1: Student User
+
+Description:
+A college student who uses Drive for coursework, group projects, and syncing files across devices.
+
+Goals:
+- Store class notes and assignments
+- Share folders with group partners
+- Access files on laptop and mobile
+
+Pain Points:
+- Slow upload performance before deadlines
+- Confusion with sharing permissions
+- Difficulty tracking versions of group edits
+
+Behaviors:
+- Frequently uses Docs and Slides
+- Relies heavily on mobile access
+- Often works offline during commutes
+
+## Persona 2: Knowledge Worker
+
+Description:
+A full-time professional using Drive to collaborate with colleagues and manage work documents daily.
+
+Goals:
+- Organize large volumes of files
+- Use advanced search to locate documents quickly
+- Maintain consistent version control
+
+Pain Points:
+- Inconsistent search relevance
+- Duplicate documents caused by sync conflicts
+- Difficulty understanding Shared Drive permissions
+
+Behaviors:
+- Works across multiple devices
+- Handles sensitive files that require correct access control
+- Expects fast, stable performance
+
+## Persona 3: Team Lead or Manager
+
+Description:
+A manager overseeing documentation, shared resources, and team workflows inside Drive.
+
+Goals:
+- Maintain organized Shared Drives
+- Ensure correct permission settings
+- Track changes across team files
+
+Pain Points:
+- Confusing role differences inside Shared Drives
+- Missing or outdated files from inconsistent team workflows
+- Difficulty monitoring file activity across large teams
+
+Behaviors:
+- Reviews file activity regularly
+- Requests consolidated summaries of issues
+- Prioritizes reliability and security

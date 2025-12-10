@@ -1,0 +1,121 @@
+# Feedback Labeling Guidelines for Google Drive
+
+This document defines how to assign structured labels to customer feedback. These guidelines ensure consistent output from the labeling system and support future integrations with PM tools like Jira.
+
+## 1. Summary
+
+Provide a one-sentence restatement of the core issue or request.
+
+- Focus on what happened, not opinions.
+- Avoid adding details that are not explicitly mentioned or implied.
+
+## 2. Sentiment
+
+Classify sentiment based on the user's wording and tone.
+
+- Positive: User expresses satisfaction or appreciation.
+- Neutral: User describes an issue or observation without emotion.
+- Negative: User expresses frustration, dissatisfaction, or urgency.
+
+If mixed, choose the strongest sentiment conveyed.
+
+## 3. Urgency (Low / Medium / High)
+
+Based on how time-sensitive or blocking the issue is.
+
+- Low: Minor inconvenience, cosmetic issue, slow performance not blocking workflow.
+- Medium: Impacts workflow but has a workaround; causes repeated frustration.
+- High: Blocks progress, prevents file access, risks missed deadlines, or implies potential data loss.
+
+## 4. Risk Flag
+
+Identify high-level risks implied by the feedback.
+
+- Usability Risk: User confusion, unclear UI behavior, unintuitive workflows.
+- Reliability Risk: Sync failures, unpredictable results, inconsistent behavior.
+- Security / Access Control Risk: Unexpected sharing behavior, unsafe defaults.
+- Performance Risk: Slowness, freezes, delays.
+- Data Integrity Risk: Missing files, sync conflicts, lost edits.
+- Churn Risk: User indicates they may stop using Drive due to repeated issues.
+- Competitive Threat: User references switching to another service.
+
+Choose one or two most relevant.
+
+## 5. Product Area
+
+Map feedback to one Drive feature or system component.
+
+Available product areas:
+- Upload & Sync
+- Sharing & Permissions
+- Shared Drives
+- Search & Indexing
+- File Preview / Viewing
+- Version History
+- Offline Access
+- Notifications
+- General Performance
+
+If unclear, choose the area most directly implied.
+
+CRITICAL RULE FOR VAGUE FEEDBACK:
+- If feedback only says "slow", "laggy", "everything is broken" WITHOUT mentioning a specific feature, use "General Performance"
+- DO NOT assign specific product areas unless the feedback explicitly mentions that feature
+
+## 6. Suggested User Story
+
+Follow the standard product story format:
+
+"As a [persona], I want [change] so that [benefit]."
+
+- Base persona on feedback context where possible.
+- Keep scope appropriate (not too large or vague).
+- Ensure story aligns with Drive's constraints and capabilities.
+
+## 7. Priority Recommendation (Low / Medium / High)
+
+Reflects product/business importance, not user emotion.
+
+- Low: Minor inconvenience, low impact on the majority of users.
+- Medium: Affects common workflows or several users; needs attention soon.
+- High: Critical issue impacting many users or high-risk areas (access, sync, data integrity).
+
+Use urgency as input, but not the only factor.
+
+## 8. Jira Type
+
+Choose the ticket category a PM would likely log:
+
+- Bug: Something is broken or behaving incorrectly.
+- Feature Request: User asks for new capability.
+- Improvement: Existing feature works but could be better.
+- Task: Non-user-facing work needed (documentation, cleanup).
+
+## 9. Suggested Owner Team
+
+Based on product area:
+
+- Sync Team → Uploading, syncing, conflicts
+- Search Team → Search, indexing, filtering
+- Sharing Team → Permissions, link sharing
+- Shared Drives Team → Team drive behavior
+- Offline Team → Offline availability and sync
+- Docs/Sheets Team → Editing-specific issues
+- Frontend Web Team → UI/UX issues on web
+- Mobile Team → Mobile-specific bugs or flows
+
+Choose the closest functional owner.
+
+## 10. Notes
+
+Freeform short field for:
+
+- Additional clarifications
+- Potential reproduction steps
+- Observations about patterns
+- Links to similar items
+- PM triage comments
+
+Keep notes short and factual.
+
+End of Guidelines

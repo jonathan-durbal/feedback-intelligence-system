@@ -1,0 +1,130 @@
+# Google Drive Performance Issues Guide
+
+## Common Performance Complaints
+
+Users frequently report the following performance-related issues:
+
+### General Slowness
+- "Everything is slow"
+- "Drive is laggy"
+- "Interface feels sluggish"
+- "Pages take forever to load"
+
+When feedback mentions general slowness without specifying a feature, this indicates a broad performance issue that should be categorized as "General Performance" rather than a specific product area.
+
+## Performance Issue Categories
+
+### 1. Upload Performance Issues
+Keywords: slow upload, upload taking forever, stuck uploading, upload freezes, upload at 99%
+
+Common causes:
+- Network bandwidth limitations
+- Large file size requiring chunked uploads
+- Server processing delays
+- Intermittent connection interruptions
+
+Product Area: Upload & Sync
+
+### 2. Sync Performance Issues
+Keywords: slow sync, sync delays, changes not appearing, sync lag
+
+Common causes:
+- Background sync queue backlog
+- Conflict resolution processing
+- Multiple device sync coordination
+- Network latency
+
+Product Area: Upload & Sync
+
+### 3. Search Performance Issues
+Keywords: slow search, search taking forever, results loading slowly, search lag
+
+Common causes:
+- Indexing delays after large uploads
+- Complex query processing
+- Large result set filtering
+- Mobile platform limitations
+
+Product Area: Search & Indexing
+
+### 4. Loading Performance Issues
+Keywords: slow loading, pages loading slowly, interface lag, UI freezes, unresponsive
+
+Common causes:
+- Large folder tree rendering
+- Metadata fetching delays
+- Client-side processing bottlenecks
+- Network latency
+
+Product Area: General Performance
+
+### 5. Preview Performance Issues
+Keywords: preview slow, PDF taking forever, file preview lag
+
+Common causes:
+- Large file rendering
+- Format conversion delays
+- Client-side processing
+
+Product Area: File Preview / Viewing
+
+### 6. Shared Drive Performance Issues
+Keywords: Shared Drive slow, team drive lag, folder loading slowly in Shared Drive
+
+Common causes:
+- Large metadata payloads
+- Complex permission structures
+- Multiple folder levels
+
+Product Area: Shared Drives
+
+## Performance Constraints from Product Architecture
+
+From Known Constraints:
+- Upload speed depends on user bandwidth and device performance
+- Very large files require chunked uploads and may fail on unstable networks
+- Drive cannot guarantee real-time sync across slow or intermittent connections
+- Newly uploaded files may not appear in search results immediately due to indexing delay
+- Folder reorganization in large Shared Drives may temporarily reduce performance
+
+## Decision Rules for Performance Feedback
+
+RULE 1: Vague Performance Complaints
+If feedback only mentions "slow", "laggy", "performance" WITHOUT specifying which feature:
+→ Product Area: General Performance
+→ Risk Flag: Performance Risk
+→ Do NOT guess which specific feature is slow
+
+RULE 2: Feature-Specific Performance
+If feedback says "uploading is slow" or "search is slow":
+→ Product Area: The specific feature mentioned (Upload & Sync, Search & Indexing, etc.)
+→ Risk Flag: Performance Risk
+→ Reference relevant constraints from documentation
+
+RULE 3: Multiple Performance Issues
+If feedback mentions multiple slow areas:
+→ Product Area: General Performance
+→ Notes: Mention that multiple areas are affected
+→ Risk Flag: Performance Risk
+
+## Example Performance Feedback Classifications
+
+Example 1: "Everything loads so slowly, it's unusable"
+- Product Area: General Performance
+- Risk Flag: Performance Risk
+- Notes: User reports broad performance degradation across interface
+
+Example 2: "File uploads are extremely slow"
+- Product Area: Upload & Sync
+- Risk Flag: Performance Risk
+- Notes: May be related to bandwidth constraints or file size
+
+Example 3: "Searching for files takes forever"
+- Product Area: Search & Indexing
+- Risk Flag: Performance Risk
+- Notes: Possible indexing delays or large result set processing
+
+Example 4: "The whole app freezes when I open large Shared Drives"
+- Product Area: Shared Drives
+- Risk Flag: Performance Risk
+- Notes: Known issue with large folder trees and metadata payloads

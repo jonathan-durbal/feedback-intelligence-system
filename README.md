@@ -155,6 +155,7 @@ Once enabled:
 * The Gradio UI displays green “Jira Enabled” status.
 * The “Send to Jira” button converts the JSON into Atlassian Document Format and posts it using the Jira REST API.
 * Jira will show new issues instantly on your Scrum board.
+* The system automatically skips Jira creation when the model determines that feedback is out of scope for Google Drive. These cases will return a status message instead of creating an issue in Jira.
 
 If Jira is disabled:
 

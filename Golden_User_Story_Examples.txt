@@ -1,0 +1,67 @@
+# Golden User Story Examples for Google Drive
+
+## User Story Example 1 -- Sharing Permissions
+
+User Story:
+As a knowledge worker, I want to set clear sharing permissions so that collaborators only have the level of access they need.
+
+Acceptance Criteria:
+- User can choose Viewer, Commenter, or Editor
+- Permission changes apply immediately
+- Confirmation message appears after updating access
+- Users with restricted access cannot edit files
+
+## User Story Example 2 -- Faster File Search
+
+User Story:
+As a frequent Drive user, I want search results to prioritize my recent and most-used files so that I can find important documents quickly.
+
+Acceptance Criteria:
+- Recent files appear in top results when relevant
+- Typing triggers instant suggestions
+- Filters work consistently on mobile and desktop
+- Search results update after new uploads without delay
+
+## User Story Example 3 -- Clear Sync Conflict Resolution
+
+User Story:
+As a user who edits files on multiple devices, I want Drive to clearly explain sync conflicts so that I can resolve them without losing work.
+
+Acceptance Criteria:
+- Conflict notifications show which version differs
+- Options to choose local or cloud version
+- No duplicate files created after resolving
+- Final version syncs correctly across all devices
+
+## User Story Example 4 -- Offline Editing Reliability
+
+User Story:
+As a mobile user, I want to reliably edit documents offline so I can work during travel or poor connectivity.
+
+Acceptance Criteria:
+- Offline-enabled files open without errors
+- Edits save locally even without a network
+- Changes sync automatically when online
+- Users are notified only if sync fails
+
+## User Story Example 5 -- Better Organization in Shared Drives
+
+User Story:
+As a team lead, I want Shared Drives to enforce clear folder structure rules so that my team stays organized as we collaborate.
+
+Acceptance Criteria:
+- Subfolders inherit top-level permissions unless changed
+- Moving files preserves existing access
+- Users without sufficient role privileges see clear warnings
+- Team members can quickly identify their access level
+
+## User Story Example 6 -- Improved Upload Status Clarity
+
+User Story:
+As a student, I want clear upload progress indicators so I know when my assignment file is safely stored in Drive.
+
+Acceptance Criteria:
+- Upload percentage updates in real time
+- Failure messages specify cause and retry option
+- Drive warns if file size exceeds limit
+- File appears across devices after upload completion
